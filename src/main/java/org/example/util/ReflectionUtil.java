@@ -4,12 +4,19 @@ import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
 import org.reflections.util.ConfigurationBuilder;
 
+import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 
 /**
  * @author sksingh created on 05/01/24
  */
 public class ReflectionUtil {
+
+    public static List<Method> getDeclaredMethods(Class<?> clazz) {
+        return Arrays.asList(clazz.getDeclaredMethods());
+    }
 
     public static Set<Class<?>> getAllClasses(String basePackage) {
         Reflections reflections =

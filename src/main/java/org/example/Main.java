@@ -27,5 +27,8 @@ public class Main {
         for (Class<? extends Person> clazz : subClassesInPackage) {
             System.out.printf("Class: %s is sub class of %s%n", clazz.getSimpleName(), Person.class.getSimpleName());
         }
+
+        // Validating naming convention of classes, methods & throwing exception if convention is not followed.
+        //  NamingConventionValidator.validateNamingConventions("org.example.model");
     }
 }
